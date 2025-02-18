@@ -8,17 +8,19 @@
 
     //ENTRADA
     let palavra = prompt("Insira uma palavra")
-    let vogais = vogal(palavra)
+    let vogais = contarVogais(palavra)
     //PROCESSAMENTO
-    function vogal(palavra){
-          palavra = palavra.toLowerCase();
-              for (let i = 0; i < palavra.length; i++) {
-              if ("aeiou".includes(palavra[i])) { 
-                  contador++;
-              }
-          }
-          return contador; 
+    function contarVogais(palavra){
+        let contador = 0;
+        palavra = palavra.toLowerCase();
+        for (let i = 0; i < palavra.length; i++) {
+            if ("aeiou".includes(palavra[i])) { 
+                contador++;
+            }
         }
+        return contador; 
+    }
+
     //SAÍDA
-    alert("A palavra tem " + vogais + "vogais")
+    alert("A palavra tem " + vogais + " vogais")
 </script>
